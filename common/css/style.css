@@ -1,0 +1,88 @@
+@charset 'utf-8';
+body { text-transform: uppercase; text-align: center; font-family: 'Noto Sans KR', sans-serif; }
+
+nav #menu { position: fixed; top: 0; width: 100%; background-color: #fff; display: flex; justify-content: space-around; align-items: center; list-style: none; padding: 0; margin: 0; border-bottom: 4px solid #000; z-index: 1000; }
+nav #menu li {  width: 25%; padding: 10px 0; border-right: 4px solid #000; }
+nav #menu li:last-child { border: none; }
+nav #menu li a { position: relative; padding: 2px 5px; color: #000; text-decoration: none; }
+nav #menu li a::before { transform: scaleX(0); transform-origin: bottom right; }
+nav #menu li a:hover::before { transform: scaleX(1); transform-origin: bottom left; }
+nav #menu li a::before { content: " "; display: block; position: absolute; top: 0; bottom: 0; left: 0; inset: 0 0 0 0; background: #FFD800; z-index: -1; transition: transform .3s ease; }
+
+/**** header ****/
+header { width: 100%; height: 110vh; font-family: 'Montserrat', sans-serif; font-size: 22px; position: relative; }
+
+header #typing { font-family: 'Luckiest Guy', cursive; font-size: 12rem; padding: 15.5vw 0 12vw; }
+header .Typewriter__cursor { font-family: none; }
+header img { 
+    position: absolute; top: -200px; left: 0; right: 0; margin: auto; opacity: 0;
+    animation-name: drop;
+    animation-duration: 1S;
+    animation-delay: 3S;
+    animation-fill-mode: forwards;
+}
+@keyframes drop {
+    100% {
+        top: 12.5vw;
+        opacity: 1;
+    }
+}
+
+header .ezkorry-roller { overflow: hidden; white-space: nowrap; border-top: 4px solid #000; border-bottom: 4px solid #000; padding: 15px 0; margin-top: 1%; }
+header .ezkorry-roller span::after { content: ""; padding: 0 20px; }
+header .ezkorry-roller span { position:relative; }
+
+/**** main ****/
+main { background-color: #FFD800; padding-bottom: 100px; }
+main .txt { font-size: 90px; padding: 150px 0; text-align: left; margin: 0 auto; width: 960px; }
+main .txt p { margin: 0; padding: 0 0 50px; position: relative; box-sizing: border-box; }
+main .txt p span { font-family: 'SBAggroB'; font-size: 120px; }
+main .txt img { margin: 0 50px; position: absolute; top: -50px; }
+
+/**** video ****/
+main .video_bg { background-color: #5c5c5c93; width: 100%; height: 770px;}
+
+/**** project ****/
+main .project { font-family: 'Montserrat', sans-serif; display: flex; width: 80%; justify-content: center; align-content: center; margin: 100px auto; position: relative; }
+main .project h2 { width: 45%; font-size: 90px; margin: 10px 50px 0 0; }
+main .project ul { width: 55%; border-left: 4px solid #000; list-style: none;box-sizing: border-box; text-align: left; margin: 0; padding: 0; }
+main .project ul li { font-size: 60px; border-bottom: #000 4px solid; padding: 49px; position: relative; }
+main .project ul li:last-child { border: none; }
+main .project ul li p { font-size: 20px; font-family: 'Noto Sans KR', sans-serif; margin: 20px 0; }
+main .project ul li p span { font-weight: bold; }
+
+main .project ul .pj a img { height: 100%; position: absolute; bottom: 0; left: 0; opacity: 0; transition: 0.5s; }
+main .project ul .pj:hover img { opacity: 1; }
+
+/**** skill ****/
+main .ezkorry-roller { overflow: hidden; white-space: nowrap; border-top: 4px solid #000; border-bottom: 4px solid #000; padding: 15px 0; margin-top: 1%; font-family: 'Luckiest Guy', cursive; font-size: 140px; }
+main .ezkorry-roller span::after { content: ""; padding: 0 60px; }
+main .ezkorry-roller span { position:relative; }
+
+main .sk { width: 70%; display: flex; padding: 120px; margin: 0 auto; position: relative; font-size: 22px; }
+main .sk1, main .sk3 { justify-content: right; text-align: right; }
+main .sk2, main .sk4 { justify-content: left; text-align: left; }
+main .sk .bgb { width: 350px; height: 350px; background-color: #fff; border-radius: 56px; }
+main .sk img { position: absolute; }
+main .sk1 img { top: 80px; right: 6px; }
+main .sk2 img { top: 100px; left: 35px; }
+main .sk3 img { top: 150px; right: 45px; }
+main .sk4 img { top: 80px; left: 60px; }
+main .sk section { margin: 50px 160px; width: 40%; line-height: 1.5; }
+
+/**** footer ****/
+footer .tal {  text-align: left; }
+footer h2 { font-size: 70px; font-weight: 500; padding-top: 300px; width: 500px; margin-left: 120px; }
+footer .about { position: relative; border-top: 1px #000 solid; width: 90%; height: 500px; margin: 0 auto 70px; }
+footer .about ul { font-size: 30px; width: 600px; line-height: 1.5; list-style: none; }
+footer .about img { position: absolute; bottom: 50px; right: 30px; box-shadow: 10px 10px 30px #efefef; }
+
+footer address::before { transform: scaleX(0); transform-origin: bottom right; }
+footer address:hover::before { transform: scaleX(1); transform-origin: bottom left; }
+footer address::before { content: " "; display: block; position: absolute; top: 0; bottom: 0; left: 0; inset: 0 0 0 0; background: #FFD800; z-index: -1; transition: transform .3s ease; }
+footer address { position: relative; display: inline; padding:0 5px 5px 5px; font-style: normal; font-weight: 900; font-size: 90px; text-transform: lowercase; }
+
+footer .gotop { width: 100%; position: relative; }
+footer .gotop a { display: block; width: 104px; position: absolute; right: 50px; bottom: -170px; }
+
+footer .last { margin: 200px auto 30px; border-top: #000 4px solid; border-bottom: #000 4px solid; padding: 10px; width: 95%; font-family: 'Montserrat', sans-serif; font-size: 20px; }
